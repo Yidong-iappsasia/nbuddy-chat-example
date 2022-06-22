@@ -1,0 +1,95 @@
+$primary: #d81b60;
+
+.container {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid gray;
+  border-radius: 6;
+  height: 500px;
+  overflow-y: auto;
+  background: #eceaea;
+}
+
+.flex-1 {
+  flex: 1
+}
+
+.room {
+  margin: 8px 0;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  small {
+    color: gray;
+  }
+
+  &:hover {
+    background: $primary;
+    color: white;
+    small {
+      color: white;
+    }
+  }
+}
+
+.member {
+  margin: 8px 0;
+  padding: 1rem 1.5rem;
+  background: #fff;
+}
+
+.chats-card {
+  @extend .card;
+  padding: 1rem;
+}
+
+.message {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+  div {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+  }
+  p {
+    margin: 4px 0;
+  }
+  img {
+    height: 150px;
+    object-fit: cover;
+    display: block;
+  }
+  a {
+    display: block;
+  }
+  &-left label {
+    color: $primary;
+  }
+  &-right {
+    justify-content: flex-end;
+    div {
+      background-color: $primary;
+      color: white;    
+    }
+  }
+  &-form {
+    margin-top: 1rem;
+    display: flex;
+    gap: 4px;
+    input {
+      flex: 1
+    }
+  }
+  .option {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
